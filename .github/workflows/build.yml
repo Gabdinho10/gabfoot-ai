@@ -14,6 +14,11 @@ jobs:
       - name: Get source code
         uses: actions/checkout@v4
 
+      - name: Extract GABFOOT project
+        run: |
+          unzip -o GABFOOT_AI_Flutter_Starter_ChampionsLeague_SANS_DOUBLONS.zip -d /tmp/gabfoot
+          cp -a /tmp/gabfoot/GABFOOT_AI_Flutter_Starter/. .
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
